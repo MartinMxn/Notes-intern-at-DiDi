@@ -43,3 +43,33 @@ Sth need to fix:
   line-height: 30px;
   outline: none;
 ```
+4. For future changes, more code may be better
+```
+border-width: 10px 10px 10px 0;
+```
+If we want to change later
+```
+border-width: 10px;
+border-left-width: 0; /* might be better, but depends */
+```
+5. currentColor/inherit
+...need examples
+
+### Responsive web design
+1. Try to use % instead of fixed length
+2. For larger resolution, when you need fix width, try to use max-width, it'll fit for smaller resolution  
+3. background-size: cover => make background fill out the container  
+4. Give replaced elements(< iframe >< video >< embed >< img >, content change their sizes) max-width: 100% 
+5.  
+```
+background: black;
+background-color: black; /* may be influenced by background-image*/
+```
+Is **NOT** same.  
+background-color: back default have 'repeat' attribute  
+background: black default have 'no-repeat' attribute  
+#### 
+background 可以设置 背景颜色、背景图片、定位等
+background-color 只能设置 背景颜色
+
+## Chapter two

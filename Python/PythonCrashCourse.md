@@ -98,8 +98,24 @@ Python将带小数点的数字都称为**浮点数**
 ```
 在Python 2中，若要避免这种情况，务必确保至少有一个操作数为浮点数，这样结果也将为浮点数
 
-## comments
+## Comments
 single line by '#'
 multiple line by ''' ''' or """ """
 
-## import this => show the zen of python...
+### import this => show the zen of python...
+
+# List
+## Concept
+**列表**由一系列按特定顺序排列的元素组成。你可以创建包含字母表中所有字母、数字0~9或所有家庭成员姓名的列表；也可以将任何东西加入列表中，其中的元素之间可以没有任何关系。Generally, 给列表指定一个复数名称。
+```
+bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+print(bicycles)
+```
+### Get
+```
+bicycles[0]
+```
+## Modification
+```
+bicycles[0] = 'sth else'
+```

@@ -24,10 +24,12 @@ print(name.title())
 Ada Lovelace
 ```
 title() 以首字母大写的方式显示每个单词，即将每个单词的首字母都改为大写。  
+```
 name = "Ada Lovelace" 
 print(name.upper()) 
 print(name.lower())
-存储数据时，方法lower() 很有用。很多时候，你无法依靠用户来提供正确的大小写，因此需要将字符串先转换为小写，再存储它们。以后需要显示这些信息时，再将其转换为 最合适的大小写方式。  
+```
+存储数据时，方法**lower()** 很有用。很多时候，你无法依靠用户来提供正确的大小写，因此需要将字符串先转换为小写，再存储它们。以后需要显示这些信息时，再将其转换为 最合适的大小写方式。  
 
 ### concate string '+'
 ```
@@ -106,16 +108,14 @@ multiple line by ''' ''' or """ """
 
 # List
 ## Concept
-**列表**由一系列按特定顺序排列的元素组成。你可以创建包含字母表中所有字母、数字0~9或所有家庭成员姓名的列表；也可以将任何东西加入列表中，其中的元素之间可以没有任何关系。Generally, 给列表指定一个复数名称。
 ```
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
-print(bicycles)
 ```
+**列表** 由一系列按特定顺序排列的元素组成。可以创建包含字母表中所有字母、数字0~9或所有家庭成员姓名的列表；也可以将任何东西加入列表中，其中的元素之间可以没有任何关系。Generally, 给列表指定一个复数名称。
+
 ### Get
 ```
-bicycles[0]
-```
-## Modification
-```
-bicycles[0] = 'sth else'
+bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+print(bicycles[0])
+trek
 ```

@@ -30,16 +30,16 @@ Details for tags:
 
 ## Rules:  
 1. 块级元素与块级元素平级、内嵌元素与内嵌元素平级  
-<div><span></span><a></a></div>  // ✅  
-<div><span></span><p></p></div>  // ❌ span是行内元素，p是块级元素，所以这个是错误的嵌套  
+<div><span></span><a></a></div>// ✅  
+<div><span></span><p></p></div>// ❌ span是行内元素，p是块级元素，所以这个是错误的嵌套  
 应改为 <div><div><span></span></div><p></p></div>  
 #### 
 2. 块元素可以包含内联元素或某些块元素，但内联元素不能包含块元素，它只能包含其它的内联元素  
-<div><span></span></div> // ✅  
-<span><span></span></span> // ✅  
-<span><div></div></span> // ❌ 
-<span><p></p></span> // ❌ 
+<div><span></span></div>// ✅  
+<span><span></span></span>// ✅  
+<span><div></div></span>// ❌ 
+<span><p></p></span>// ❌ 
 #### 
 3. 有几个特殊的块级元素只能包含内嵌元素，不能再包含块级元素  
 **h1-h6、p、dt**  
-<p><div></div></p> // ❌
+<p><div></div></p>// ❌

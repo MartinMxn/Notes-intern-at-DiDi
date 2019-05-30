@@ -81,14 +81,14 @@ min(digits)
 max(digits)
 sum(digits)
 
-### List comprehension
+### List comprehension 列表解析
 ```
 squares = [value**2 for value in range(1,11)]
 ```
 列表解析 将for 循环和创建新元素的代码合并成一行，并自动附加新元素。
 **这里的for 语句末尾没有冒号。**
 
-### Slice
+### Slice 切片
 可指定要使用的第一个元素和最后一个元素的索引。
 ```
 print(players[0:3])
@@ -107,4 +107,86 @@ players[-3:] ：
 要复制列表，可创建一个包含整个列表的切片，方法是同时省略起始索引和终止索引
 [:] 
 friend_foods = my_foods[:]
+```
+
+## Tuple 元组
+```
+dimensions = (200, 50)
+# 是不能修改的
+# 遍历 for
+
+虽然不能修改元组的元素，但可以给存储元组的变量赋值。
+dimensions = (400, 100)
+```
+
+## Code style
+PEP 8建议每级缩进都使用四个空格
+建议每行不超过80字符
+
+## If 
+```
+if age < 4:
+  print("Your admission cost is $0.")
+elif age < 18:
+  print("Your admission cost is $5.")
+else:
+  print("Your admission cost is $10.")
+```
+### and / or
+```
+判断特定的值是否已包含在列表中，可使用关键字in / not in
+>>> requested_toppings = ['mushrooms', 'onions', 'pineapple']
+>>> 'mushrooms' in requested_toppings
+True
+>>> 'pepperoni' in requested_toppings
+False
+
+判断列表非空的
+requested_toppings = []
+if requested_toppings:  
+  ... 
+```
+
+## Dict
+字典 是一系列键—值对  
+```
+alien_0 = {}
+alien_0['color'] = 'green'
+
+# Traverse dict 
+user_0 = {
+  'username': 'efermi',
+  'first': 'enrico',
+  'last': 'fermi',
+}
+for key, value in user_0.items():
+  ...
+  
+# only key
+for name in favorite_languages.keys():
+
+# only value
+for language in favorite_languages.values():
+
+# Set()
+for language in set(favorite_languages.values()):
+```
+
+## Input()
+```
+message = input("Tell me something, and I will repeat it back to you: ")
+
+超过一行，将提示存储在一个变量中，再将该变量传递给函数input() ，更清晰。
+prompt = "If you tell us who you are, we can personalize the messages you see."
+prompt += "\nWhat is your first name? "
+name = input(prompt)
+
+# int() 
+convert to int
+如果是Python 2.7，应使用函数raw_input() 来提示用户输入
+
+# 删除包含特定值的所有列表元素
+while 'cat' in pets:
+pets.remove('cat')
+
 ```

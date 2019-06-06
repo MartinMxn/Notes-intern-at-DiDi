@@ -64,4 +64,17 @@ replaceState()  是修改了当前的历史记录项而不是新建一个。 注
 
 These methods work in conjunction with the window.onpopstate event.  
  每当活动的历史记录项发生变化时， popstate 事件都会被传递给window对象。
+ ```
+ window.onpopstate = function(event) {...}
+ ```
  如果当前活动的历史记录项是被 pushState 创建的，或者是由 replaceState 改变的，那么 popstate 事件的状态属性 state 会包含一个当前历史记录状态对象的拷贝。
+```
+eg:
+window.onpopstate = function(event){
+     console.log(event.state)
+}
+history.pushState({color:'red'}, 'red', 'red') // not trigger onpopstate
+history.pushState({color:'re'}, 're', 're') // not trigger onpopstate
+history.back()
+{color: "red"}
+ ```

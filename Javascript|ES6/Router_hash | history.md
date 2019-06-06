@@ -67,7 +67,8 @@ These methods work in conjunction with the window.onpopstate event.
  ```
  window.onpopstate = function(event) {...}
  ```
- 如果当前活动的历史记录项是被 pushState 创建的，或者是由 replaceState 改变的，那么 popstate 事件的状态属性 state 会包含一个当前历史记录状态对象的拷贝。
+如果当前活动的历史记录项是被 pushState 创建的，或者是由 replaceState 改变的，那么 popstate 事件的状态属性 state 会包含一个当前历史记录状态对象的拷贝。
+popstate 事件能监听除 history.pushState() 和 history.replaceState() 外 url 的变化。
 ```
 eg:
 window.onpopstate = function(event){

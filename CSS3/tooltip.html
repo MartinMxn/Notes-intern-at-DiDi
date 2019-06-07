@@ -1,0 +1,260 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #container {
+      width: 40vw;
+      height: 50vh;
+      min-height: 200px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      border: 2px solid #dcdcdc;
+      border-radius: 10px;
+    }
+
+    #container .tip {
+      border: 2px solid #dcdfe6;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 10px;
+      padding: 15px 5px;
+      margin: 8px 8px;
+      position: absolute;
+    }
+
+    /* top part */
+    #container .tip[pos="top"] {
+      left: 0;
+      right: 0;
+    }
+
+    #container .tip:hover {
+      color: #409eff;
+      border-color: #c6e2ff;
+    }
+
+    .top-tip::before {
+      display: none;
+      content: attr(pos);
+      position: absolute;
+      color: #000;
+      padding: 8px 15px;
+      bottom: 100%;
+      left: 50%;
+      transform: translate(-50%);
+      background: white;
+      box-shadow: 0 5px 8px -1px rgba(0, 0, 0, .2);
+      border-radius: 10px;
+      animation: top-tip .25s ease-in-out;
+    }
+
+    .top-tip:hover::before {
+      display: block;
+    }
+
+    .top-tip::after {
+      display: none;
+      content: '';
+      border-top: 10px solid white;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      position: absolute;
+      bottom: 90%;
+      left: 50%;
+      transform: translate(-50%);
+      animation-delay: 25s;
+      animation: top-tip .3s ease-in-out;
+    }
+
+    .top-tip:hover::after {
+      display: block;
+    }
+
+    @keyframes top-tip {
+      from {
+        opacity: .3;
+        bottom: 105%;
+      }
+    }
+
+    /* left */
+    #container .tip[pos="left"] {
+      left: 0;
+      right: 50%;
+      top: 70px;
+      bottom: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left-tip::before {
+      display: none;
+      content: attr(pos);
+      position: absolute;
+      color: #000;
+      padding: 8px 15px;
+      bottom: 40%;
+      right: calc(100% - 16px);
+      transform: translate(-50%);
+      background: white;
+      box-shadow: 0 5px 8px -1px rgba(0, 0, 0, .2);
+      border-radius: 10px;
+      animation: left-tip .25s ease-in-out;
+    }
+
+    .left-tip:hover::before {
+      display: block;
+    }
+
+    .left-tip::after {
+      display: none;
+      content: '';
+      border-left: 10px solid white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      position: absolute;
+      bottom: 45%;
+      right: 100%;
+      transform: translate(-50%);
+      animation-delay: 25s;
+      animation: left-tip .3s ease-in-out;
+    }
+
+    .left-tip:hover::after {
+      display: block;
+    }
+
+    @keyframes left-tip {
+      from {
+        opacity: .3;
+        right: 105%;
+      }
+    }
+
+    /* right */
+    #container .tip[pos="right"] {
+      left: 50%;
+      right: 0;
+      top: 70px;
+      bottom: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .right-tip::before {
+      display: none;
+      content: attr(pos);
+      position: absolute;
+      color: #000;
+      padding: 8px 15px;
+      bottom: 40%;
+      left: calc(100% + 50px);
+      transform: translate(-50%);
+      background: white;
+      box-shadow: 0 5px 8px -1px rgba(0, 0, 0, .2);
+      border-radius: 10px;
+      animation: right-tip .25s ease-in-out;
+    }
+
+    .right-tip:hover::before {
+      display: block;
+    }
+
+    .right-tip::after {
+      display: none;
+      content: '';
+      border-right: 10px solid white;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      position: absolute;
+      bottom: 45%;
+      left: calc(100% + 10px);
+      transform: translate(-50%);
+      animation-delay: 25s;
+      animation: right-tip .2s ease-in-out;
+    }
+
+    .right-tip:hover::after {
+      display: block;
+    }
+
+    @keyframes right-tip {
+      from {
+        opacity: .3;
+        left: calc(105% + 60px);
+      }
+    }
+
+    /* bottom */
+    #container .tip[pos="bottom"] {
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .bottom-tip::before {
+      display: none;
+      content: attr(pos);
+      position: absolute;
+      color: #000;
+      padding: 8px 15px;
+      top: calc(100% + 5px);
+      left: 50%;
+      transform: translate(-50%);
+      background: white;
+      box-shadow: 0px -5px 8px -1px rgba(0, 0, 0, .2);
+      border-radius: 10px;
+      animation: bottom-tip .25s ease-in-out;
+    }
+
+    .bottom-tip:hover::before {
+      display: block;
+    }
+
+    .bottom-tip::after {
+      display: none;
+      content: '';
+      border-bottom: 10px solid white;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%);
+      animation-delay: 25s;
+      animation: bottom-tip .3s ease-in-out;
+    }
+
+    .bottom-tip:hover::after {
+      display: block;
+    }
+
+    @keyframes bottom-tip {
+      from {
+        opacity: .3;
+        top: calc(100% + 10px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="tip top-tip" pos="top">top</div>
+    <div class="tip left-tip" pos="left">left</div>
+    <div class="tip right-tip" pos="right">right</div>
+    <div class="tip bottom-tip" pos="bottom">bottom</div>
+  </div>
+</body>
+
+</html>

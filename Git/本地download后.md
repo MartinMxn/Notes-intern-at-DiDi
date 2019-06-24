@@ -1,9 +1,12 @@
 1. download后先init git init
 修改一定文件或者不修改
+2. 切换至不同于master分支 git checkout -b aaa
 2. git add/commit 
 3. 添加远程 git remote add origin <url>
 4. git pull origin master --allow-unrelated-histories
 5. git push --set-upstream origin aaa
+6. 远程分支merge aaa和master
+  本地也可以git merge origin/master --allow-unrelated-histories
 
 远程连接
 git remote add github git://github.com/jdoe/coolapp.git

@@ -1,3 +1,10 @@
+1. download后先init git init
+修改一定文件或者不修改
+2. git add/commit 
+3. 添加远程 git remote add origin <url>
+4. git pull origin master --allow-unrelated-histories
+5. git push --set-upstream origin aaa
+
 远程连接
 git remote add github git://github.com/jdoe/coolapp.git
 git fetch github

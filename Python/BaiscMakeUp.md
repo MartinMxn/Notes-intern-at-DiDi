@@ -97,9 +97,61 @@ class Schedule(obj):
     
 ```
 
+## decorator
+add additional function  
+In python, function is also first-class object, you may pass function around and use them as arguments for other functions
 
+## read file
+```
+with open('*.py', 'r') as f:  # with will call __exit()__ at the end automatically
+    data = f.read()
+    print(data)
+# file mode ('r' -> read, 'U', 'w', 'a')  may append(+ for add if file doesn't exist)
+```
 
+## command line
+```
+import sys    # don't forget to import sys
 
+if __name__ == '__main__':
+    args = sys.argv
+    a1 = args[1]    # command line start with 1, not 0
+    a2 = args[2]
+```
+
+## Exception
+```
+try:
+    1 + '1'
+except TypeError as te:
+    print('type are wrong %s' % te.message) # in this case, will only call type error
+except Exception as e:
+    print('something wrong')
+finally:
+    print('finally do something')
+```
+Customized Exception:
+```
+class AwesomeException(Exception):   # !inherit from Exception
+    def __init__(self, *args, **kwargs):
+        Exception.__init__(self, *args, **kwargs)
+# when need throw exception:
+raise AwesomeException('message you want to pass for customized exception')
+```
+
+## test 
+name: test_schedule.py
+need pytest dependency
+```
+def test_add:
+    s = Schedule()
+    s.add_task('test', 'test test content', 100)
+    assert 'test' in s.tasks
+    
+# and then in the folder run command: pytest
+# pytest will auto scan the .py file start with test_*.
+# 很多时候会先写test case再写程序去满足
+```
 
 
 

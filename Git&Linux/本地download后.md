@@ -7,6 +7,16 @@
 5. git push --set-upstream origin aaa
 6. 远程分支merge aaa和master
   本地也可以git merge origin/master --allow-unrelated-histories
+  
+拉取远程branch到本地
+```
+git checkout -b 本地分支名 origin/远程分支名
+
+如果不成功
+git fetch
+然后再执行下面的命令即可。
+git checkout -b 本地分支名 origin/远程分支名
+```
 
 远程连接
 git remote add github git://github.com/jdoe/coolapp.git

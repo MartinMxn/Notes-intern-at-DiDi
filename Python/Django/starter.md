@@ -64,3 +64,5 @@ urlpatterns = [
 #### check for result
 python manage.py runserver  
 Go to http://localhost:8000/polls/ 
+
+#### The path() function is passed four arguments, two required: route and view, and two optional: kwargs, and name.
